@@ -6,6 +6,10 @@
    ng config -g cli.packageManager cnpm
    ```
 
+```
+  npm initall --save-dev gulp
+```
+
 ## 模块
 
 ## 组件
