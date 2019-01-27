@@ -4,7 +4,7 @@
  
     
 ```
-   ng config -g cli.packageManager cnpm
+ng config -g cli.packageManager cnpm
 ```
 
 
