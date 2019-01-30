@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '组件模板';
+  srcc = '../../../../../../../assets/baidu_jgylogo3.gif';
   heroes: Hero[] = [
     { id: 1, name: 'hewei' },
     { id: 2, name: 'shuaige' }
@@ -15,6 +16,13 @@ export class AppComponent {
   dd: Boolean = false;
   distply = 'display: none;';
   name: string;
+  isSpecial: Boolean = true;
+
+  classes: Object = {
+    'saveable': true,
+    'modified': true,
+    'special': true
+  };
   deleteHero(hero): void {
     this.name = hero;
     console.log(hero);
