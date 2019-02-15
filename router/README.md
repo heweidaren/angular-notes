@@ -1,27 +1,27 @@
 # Router
+### 创建路由
+```
+ng generate module my-module --routing
+```
+imports中导入路由模块
+```
+RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- 路由信息打印
+    )
+```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+### 导入路由
 
-## Development server
+```
+import { RouterModule, Routes } from '@angular/router';
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### 默认路由 通配符路由
+pathMatch定义匹配策略，必须为full
 
-## Code scaffolding
+```
+  { path: '', redirectTo: '/heroes', pathMatch: 'full' }
+  { path: '**', component: PageNotFoundComponent }
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
